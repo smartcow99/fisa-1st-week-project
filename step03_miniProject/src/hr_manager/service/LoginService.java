@@ -13,7 +13,7 @@ public class LoginService {
 	
 	private ArrayList<Manager> manager = new ArrayList<Manager>();
 	
-	private LoginService() {}
+	public LoginService() {}
 	
 	public static LoginService getInstance() {
 		return instance;

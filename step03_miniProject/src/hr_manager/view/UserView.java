@@ -1,12 +1,13 @@
 package hr_manager.view;
 
-import lombok.AllArgsConstructor;
-
-@AllArgsConstructor
 public class UserView {
 	
 	private String email;
 	
-	public void UserView() {}
+	public UserView(String email) {
+		
+		System.out.println("UserView is called");
+		System.out.println(email);
+	}
 	
 }

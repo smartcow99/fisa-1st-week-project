@@ -7,13 +7,7 @@ import hr_manager.controller.LoginController;
 public class StartView {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		// Manager Info
-		
-		
-		// User Info
-		
-		
+
 		LoginController controller = LoginController.getInstance();
 		Scanner sc = new Scanner(System.in);
 
@@ -28,7 +22,6 @@ public class StartView {
 				String email = sc.next();
 				System.out.print("Password: ");
 				String pw = sc.next();
-//				System.out.println(email + " " + pw);
 				controller.userCheck(email, pw);
 			}
 			else {
