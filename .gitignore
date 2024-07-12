@@ -4,3 +4,4 @@
 /.settings
 /.classpath
 ./step03_miniProject/target/
+*.class
