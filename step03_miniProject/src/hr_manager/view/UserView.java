@@ -7,6 +7,8 @@ public class UserView {
 	
 	private String email;
 	
-	public void UserView() {}
+	public void UserView() {
+		
+	}
 	
 }
