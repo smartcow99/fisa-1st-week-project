@@ -1,0 +1,10 @@
+1,John,010-1234-5678,manager1@example.com,password1
+2,Jane,010-2345-6789,manager2@example.com,password2
+3,Michael,010-3456-7890,manager3@example.com,password3
+4,Alice,010-4567-8901,manager4@example.com,password4
+5,Robert,010-5678-9012,manager5@example.com,password5
+6,Mary,010-6789-0123,manager6@example.com,password6
+7,David,010-7890-1234,manager7@example.com,password7
+8,Laura,010-8901-2345,manager8@example.com,password8
+9,Daniel,010-9012-3456,manager9@example.com,password9
+10,Emily,010-0123-4567,manager10@example.com,password10
