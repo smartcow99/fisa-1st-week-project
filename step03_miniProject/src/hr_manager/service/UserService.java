@@ -3,6 +3,7 @@ package hr_manager.service;
 
 import java.util.ArrayList;
 import hr_manager.model.dto.User;
+import hr_manager.sql.InitInformationUtil;
 
 public class UserService {
 	private static UserService userServiceInstance = new UserService();
@@ -13,7 +14,7 @@ public class UserService {
 		return userServiceInstance;
 	}
 	//User 저장
-	private ArrayList<User> UserList = new ArrayList<User>();
+	private ArrayList<User> UserList = InitInformationUtil.getInstance().getUsers();
 	
 	/*
 	 *  모든 User

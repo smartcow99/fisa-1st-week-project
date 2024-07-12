@@ -3,6 +3,7 @@ package hr_manager.view;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import hr_manager.controller.LogoutController;
 import hr_manager.controller.ManagerController;
 import hr_manager.model.dto.User;
 
@@ -12,6 +13,7 @@ public class ManagerView {
 	}
 
 	private static ManagerController controller = ManagerController.getInstance();
+	private static LogoutController logout = LogoutController.getInstance();
 
 	public static void showMenu() {
 		Scanner sc = new Scanner(System.in);
@@ -70,6 +72,7 @@ public class ManagerView {
 			}
 			default:
 				System.out.println("etc");
+				logout.printAll();
 				flag = false;
 				break;
 			}

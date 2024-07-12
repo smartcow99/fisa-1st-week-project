@@ -1,7 +1,9 @@
 package hr_manager.sql;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,13 +25,38 @@ public class InitInformationUtil {
 	ArrayList<User> users = new ArrayList<User>();
 	ArrayList<Manager> managers = new ArrayList<Manager>();
 
-	public ArrayList<User> getUsers(){
+	public ArrayList<User> getUsers() {
 		return users;
 	}
-	public ArrayList<Manager> getManagers(){
+
+	public ArrayList<Manager> getManagers() {
 		return managers;
 	}
-	
+
+	// 새로운 메서드: 사용자 데이터를 파일로 저장
+	public void saveUsersToFile(String filePath) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
+			for (User user : users) {
+				bw.write(user.toCsvString());
+				bw.newLine();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	// 새로운 메서드: 관리자 데이터를 파일로 저장
+	public void saveManagersToFile(String filePath) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
+			for (Manager manager : managers) {
+				bw.write(manager.toCsvString());
+				bw.newLine();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	public InitInformationUtil() {
 
 		try (BufferedReader br = new BufferedReader(new FileReader(
@@ -62,8 +89,6 @@ public class InitInformationUtil {
 			e.printStackTrace();
 		}
 
-		System.out.println(users);
-		System.out.println(managers);
 	}
 
 }

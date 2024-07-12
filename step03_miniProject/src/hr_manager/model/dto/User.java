@@ -15,17 +15,21 @@ import lombok.ToString;
 @Builder
 @ToString
 public class User {
-		
+
 	private int no;
-	
+
 	private String email;
-	
+
 	private String pw;
-	
+
 	private String name;
-	
+
 	private String cls;
-	
+
 	private String tel;
+
+	public String toCsvString() {
+		return no + "," + email + "," + pw + "," + name + "," + cls + "," + tel;
+	}
 
 }
