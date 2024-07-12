@@ -11,9 +11,9 @@ public class ManagerView {
 	public ManagerView() {
 	}
 
-	ManagerController controller = ManagerController.getInstance();
+	private static ManagerController controller = ManagerController.getInstance();
 
-	public void showMenu() {
+	public static void showMenu() {
 		Scanner sc = new Scanner(System.in);
 		Boolean flag = true;
 		while (flag) {
