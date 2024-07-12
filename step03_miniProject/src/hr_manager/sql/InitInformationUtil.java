@@ -10,6 +10,7 @@ import java.util.function.Function;
 import hr_manager.controller.LoginController;
 import hr_manager.model.dto.Manager;
 import hr_manager.model.dto.User;
+import lombok.Getter;
 
 public class InitInformationUtil {
 
@@ -22,10 +23,17 @@ public class InitInformationUtil {
 	ArrayList<User> users = new ArrayList<User>();
 	ArrayList<Manager> managers = new ArrayList<Manager>();
 
+	public ArrayList<User> getUsers(){
+		return users;
+	}
+	public ArrayList<Manager> getManagers(){
+		return managers;
+	}
+	
 	public InitInformationUtil() {
 
 		try (BufferedReader br = new BufferedReader(new FileReader(
-				"C:\\Users\\2-12\\Desktop\\01.lab\\fisa-1st-week-project\\step03_miniProject\\src\\hr_manager\\sql\\manager.txt"))) {
+				"C:\\Users\\2-11\\seungji\\miniproject\\firstweek\\fisa-1st-week-project\\step03_miniProject\\src\\hr_manager\\sql\\manager.txt"))) {
 
 			String line;
 			while ((line = br.readLine()) != null) {
@@ -40,7 +48,7 @@ public class InitInformationUtil {
 		}
 
 		try (BufferedReader br = new BufferedReader(new FileReader(
-				"C:\\Users\\2-12\\Desktop\\01.lab\\fisa-1st-week-project\\step03_miniProject\\src\\hr_manager\\sql\\user.txt"))) {
+				"C:\\Users\\2-11\\seungji\\miniproject\\firstweek\\fisa-1st-week-project\\step03_miniProject\\src\\hr_manager\\sql\\user.txt"))) {
 
 			String line;
 			while ((line = br.readLine()) != null) {

@@ -4,14 +4,15 @@ import java.util.ArrayList;
 
 import hr_manager.model.dto.Manager;
 import hr_manager.model.dto.User;
+import hr_manager.sql.InitInformationUtil;
 
 public class LoginService {
 
 	private static LoginService instance = new LoginService();
 
-	private ArrayList<User> user = new ArrayList<User>();
-	private ArrayList<Manager> manager = new ArrayList<Manager>();
-
+	private ArrayList<User> user = InitInformationUtil.getInstance().getUsers();
+	private ArrayList<Manager> manager = InitInformationUtil.getInstance().getManagers();
+	
 	public LoginService() {
 	}
 

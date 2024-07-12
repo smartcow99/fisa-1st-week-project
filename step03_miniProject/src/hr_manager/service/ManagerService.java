@@ -3,9 +3,10 @@ package hr_manager.service;
 import java.util.ArrayList;
 
 import hr_manager.model.dto.User;
+import hr_manager.sql.InitInformationUtil;
 
 public class ManagerService {
-	private ArrayList<User> user = new ArrayList<User>();
+	private ArrayList<User> user = InitInformationUtil.getInstance().getUsers();
 
 	public User getUser(String email) {
 		for(User u : user) {
