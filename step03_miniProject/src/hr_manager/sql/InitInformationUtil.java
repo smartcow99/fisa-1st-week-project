@@ -46,9 +46,11 @@ public class InitInformationUtil {
 	}
 
 	public InitInformationUtil() {
-
-		try (BufferedReader br = new BufferedReader(new FileReader(
-				"C:\\Users\\2-11\\seungji\\miniproject\\firstweek\\fisa-1st-week-project\\step03_miniProject\\src\\hr_manager\\sql\\manager.txt"))) {
+		String basePath = System.getProperty("user.dir");
+		String managerFilePath = basePath + "/src/hr_manager/sql/manager.txt";
+		String userFilePath = basePath + "/src/hr_manager/sql/user.txt";
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(managerFilePath))) {
 
 			String line;
 			while ((line = br.readLine()) != null) {
@@ -62,8 +64,7 @@ public class InitInformationUtil {
 			e.printStackTrace();
 		}
 
-		try (BufferedReader br = new BufferedReader(new FileReader(
-				"C:\\Users\\2-11\\seungji\\miniproject\\firstweek\\fisa-1st-week-project\\step03_miniProject\\src\\hr_manager\\sql\\user.txt"))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(userFilePath))) {
 
 			String line;
 			while ((line = br.readLine()) != null) {
