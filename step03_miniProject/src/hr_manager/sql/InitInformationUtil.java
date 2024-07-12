@@ -45,18 +45,6 @@ public class InitInformationUtil {
 		}
 	}
 
-	// 새로운 메서드: 관리자 데이터를 파일로 저장
-	public void saveManagersToFile(String filePath) {
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
-			for (Manager manager : managers) {
-				bw.write(manager.toCsvString());
-				bw.newLine();
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
 	public InitInformationUtil() {
 
 		try (BufferedReader br = new BufferedReader(new FileReader(
