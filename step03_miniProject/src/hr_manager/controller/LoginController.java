@@ -5,14 +5,15 @@ import hr_manager.view.ManagerView;
 import hr_manager.view.UserView;
 
 public class LoginController {
-	
+
 	private static LoginController instance = new LoginController();
-	
+
 	private static LoginService service = new LoginService();
-	
+
 	private static ManagerView mView = new ManagerView();
-	
-	private LoginController() {}
+
+	private LoginController() {
+	}
 
 	public static LoginController getInstance() {
 		return instance;
@@ -31,7 +32,7 @@ public class LoginController {
 //		}
 		mView.showMenu();
 		System.out.println(check);
-		
+
 	}
 
 }

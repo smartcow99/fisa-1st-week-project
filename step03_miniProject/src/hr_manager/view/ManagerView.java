@@ -8,14 +8,15 @@ import hr_manager.model.dto.User;
 
 public class ManagerView {
 
-	public ManagerView() {}
-	
+	public ManagerView() {
+	}
+
 	ManagerController controller = ManagerController.getInstance();
-	
+
 	public void showMenu() {
 		Scanner sc = new Scanner(System.in);
 		Boolean flag = true;
-		while(flag) {
+		while (flag) {
 			System.out.println("--- Menu ---");
 			System.out.println("(1) 전체 사용자 보기");
 			System.out.println("(2) 특정 사용자 검색");
@@ -25,19 +26,46 @@ public class ManagerView {
 			int i = sc.nextInt();
 			switch (i) {
 			case 1: {
-				System.out.println("1");
+				controller.getAllUser();
 				break;
 			}
 			case 2: {
-				System.out.println("2");
+				System.out.println("--- 사용자 정보 입력 ---");
+
+				System.out.println("Email: ");
+				String email = sc.next();
+
+				controller.getUser(email);
 				break;
 			}
 			case 3: {
-				System.out.println("3");
+				System.out.println("--- 사용자 정보 입력 ---");
+
+				System.out.println("Email: ");
+				String email = sc.next();
+
+				System.out.println("Password: ");
+				String pw = sc.next();
+
+				System.out.println("Name: ");
+				String name = sc.next();
+
+				System.out.println("Class: ");
+				String cls = sc.next();
+
+				System.out.println("Tel: ");
+				String tel = sc.next();
+
+				controller.addUser(email, pw, name, cls, tel);
 				break;
 			}
 			case 4: {
-				System.out.println("4");
+				System.out.println("--- 사용자 정보 입력 ---");
+
+				System.out.println("Email: ");
+				String email = sc.next();
+				
+				controller.delUser(email);
 				break;
 			}
 			default:
@@ -47,8 +75,8 @@ public class ManagerView {
 			}
 		}
 	}
-	
-	public void projectListView(ArrayList<user>) {
-		
-	}
+
+//	public void projectListView(ArrayList<user>) {
+//		
+//	}
 }
