@@ -1,37 +1,43 @@
 package hr_manager.controller;
 
+import org.junit.Test;
+
 import hr_manager.service.LoginService;
-import hr_manager.view.ManagerView;
-import hr_manager.view.UserView;
+import hr_manager.sql.InitInformationUtil;
 
 public class LoginController {
 	
+	InitInformationUtil util = new InitInformationUtil();
+	
 	private static LoginController instance = new LoginController();
 	
-	private static LoginService service = new LoginService();
+	//private static LoginService service = new LoginService();
 	
-	private static ManagerView mView = new ManagerView();
-	
-	private LoginController() {}
 
 	public static LoginController getInstance() {
 		return instance;
 	}
 
-	public void userCheck(String email, String pw) {
-		String check = service.userCheck(email, pw);
-//		if(check.equals("user")) {
-//			Userview(email);
-//		}
-//		else if(check.equals("manager")) {
-//			ManagerView
-//		}
-//		else {
-//			FailView
-//		}
-		mView.showMenu();
-		System.out.println(check);
+	@Test
+	public void test() {
+		InitInformationUtil iu = new InitInformationUtil();
 		
 	}
-
+	
+	/*
+	public void userCheck(String email, String pw) {
+		// TODO Auto-generated method stub
+		String check = service.userCheck(email, pw);
+		if(check.equals("user")) {
+			UserView
+		}
+		else if(check.equals("manager")) {
+			ManagerView
+		}
+		else {
+			FailView
+		}
+		
+	}
+*/
 }

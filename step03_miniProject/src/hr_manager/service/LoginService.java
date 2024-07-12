@@ -10,7 +10,6 @@ public class LoginService {
 	private static LoginService instance = new LoginService();
 	
 	private ArrayList<User> user = new ArrayList<User>();
-	
 	private ArrayList<Manager> manager = new ArrayList<Manager>();
 	
 	public LoginService() {}
