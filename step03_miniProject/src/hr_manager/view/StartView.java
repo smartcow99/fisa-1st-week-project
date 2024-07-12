@@ -11,25 +11,24 @@ public class StartView {
 		LoginController controller = LoginController.getInstance();
 		Scanner sc = new Scanner(System.in);
 
-		while(true) {
+		while (true) {
 			System.out.println("----Menu----");
 			System.out.println("(1) Login ");
 			System.out.println("(2) Exit ");
 			int i = sc.nextInt();
-			if(i == 1) {
+			if (i == 1) {
 				System.out.println("--- Login ---");
 				System.out.print("Email: ");
 				String email = sc.next();
 				System.out.print("Password: ");
 				String pw = sc.next();
 				controller.userCheck(email, pw);
-			}
-			else {
+			} else {
 				System.out.println("End Process...");
 				break;
 			}
 		}
-		
+
 	}
 
 }
