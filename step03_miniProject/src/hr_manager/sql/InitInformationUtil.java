@@ -7,13 +7,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.function.Function;
 
-import org.junit.Test;
 
+import hr_manager.controller.LoginController;
 import hr_manager.model.dto.Manager;
 import hr_manager.model.dto.User;
 
 public class InitInformationUtil {
-
+	
+	private static InitInformationUtil instance = new InitInformationUtil();
+	
+	public static InitInformationUtil getInstance() {
+		return instance;
+	}
+	
 	static ArrayList<User> users = new ArrayList<User>();
 	static ArrayList<Manager> managers = new ArrayList<Manager>();
 	
